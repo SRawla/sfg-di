@@ -1,6 +1,6 @@
 package com.example.sfg_di.controller;
 
-import com.example.sfg_di.services.GreetingServiceImpl;
+import com.example.sfg_di.services.ConstructorGreetingServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +11,7 @@ class SetterControllerTest {
     @BeforeEach
     void setUp(){
         controller = new SetterController();
-        controller.setGreetingService(new GreetingServiceImpl());
+        controller.setGreetingService(new ConstructorGreetingServiceImpl());
 
     }
     @Test

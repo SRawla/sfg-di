@@ -1,6 +1,6 @@
 package com.example.sfg_di.controller;
 
-import com.example.sfg_di.services.GreetingServiceImpl;
+import com.example.sfg_di.services.ConstructorGreetingServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -10,7 +10,7 @@ class ConstructorInjectorControllerTest { //MOst preferred injector
 
     @BeforeEach
     public void setup(){
-        controller = new ConstructorInjectorController(new GreetingServiceImpl());
+        controller = new ConstructorInjectorController(new ConstructorGreetingServiceImpl());
 
     }
     @Test
