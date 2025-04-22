@@ -1,9 +1,6 @@
 package com.example.sfg_di;
 
-import com.example.sfg_di.controller.ConstructorInjectorController;
-import com.example.sfg_di.controller.MyController;
-import com.example.sfg_di.controller.PropertyInjectorController;
-import com.example.sfg_di.controller.SetterController;
+import com.example.sfg_di.controller.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -30,6 +27,10 @@ public class SfgDiApplication {
 		System.out.println("-------- Constructor injector controller ");
 		ConstructorInjectorController constructorInjectorController = (ConstructorInjectorController) context.getBean("constructorInjectorController");
 		System.out.println(constructorInjectorController.getGreetingService());
+
+		System.out.println("-------- Profile Demo .");
+		I18nController i18nController = (I18nController) context.getBean("i18nController");
+		System.out.println(i18nController.sayHello());
 
 
 	}
